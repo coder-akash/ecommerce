@@ -1,0 +1,158 @@
+.products-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 48px;
+    justify-content: center;
+    width: 320px;
+    flex-grow: 0;
+    flex-shrink: 1;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.link-item {
+    text-decoration: none;
+    margin-bottom: 5px;
+    width: 350px;
+    flex-grow: 0;
+    flex-shrink: 1;
+    margin-right: 20px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .link-item {
+        width: 300px;
+    }
+}
+
+.product-item {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .product-item {
+        width: 300px;
+    }
+}
+
+.thumbnail {
+    width: 100%;
+    max-height: 350px;
+    border-radius: 6px;
+}
+
+.title {
+    color: #171f46;
+    font-family: 'Roboto';
+    font-size: 24px;
+    font-weight: 500;
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
+
+.brand {
+    color: #594d6d;
+    font-family: 'Roboto';
+    font-size: 18px;
+    margin-bottom: 6px;
+}
+
+.product-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 2px;
+}
+
+.price {
+    color: #171f46;
+    font-family: 'Roboto';
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.rating-container {
+    display: flex;
+    align-items: center;
+    background-color: #3b82f6;
+    border-radius: 6px;
+    padding: 6px 16px;
+    width: 40px;
+}
+
+.rating {
+    color: #ffffff;
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-weight: 500;
+    margin-right: 4px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.star {
+    height: 20px;
+    width: 20px;
+    margin-bottom: 3px;
+}
+
+.addtocartBtn {
+    display: flex;
+    justify-content: center;
+    background-color: linear-gradient(bottom, #33ccff 0%, #ff99cc 100%);
+    color: black;
+    border-radius: 5rem;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bolder;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+    margin: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    box-shadow: 0 0 20px #eee;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    cursor: pointer;
+    border-radius: 25px;
+}
+
+.addtocartBtn:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.gradient-button-1 {
+    background-image: linear-gradient(to right, #DD5E89 0%, #F7BB97 51%, #DD5E89 100%);
+}
+
+.gradient-button-1:hover {
+    background-position: right center;
+}
+
+.gradient-button-2 {
+    background-image: linear-gradient(to right, #2BC0E4 0%, #EAECC6 51%, #2BC0E4 100%);
+}
+
+.gradient-button-2:hover {
+    background-position: right center;
+}
+
+.gradient-button-3 {
+    background-image: linear-gradient(to right, #7474BF 0%, #348AC7 51%, #7474BF 100%);
+}
+
+.gradient-button-3:hover {
+    background-position: right center;
+}
+
+.gradient-button-4 {
+    background-image: linear-gradient(to right, #00d2ff 0%, #3a7bd5 51%, #00d2ff 100%);
+}
+
+.gradient-button-4:hover {
+    background-position: right center;
+}

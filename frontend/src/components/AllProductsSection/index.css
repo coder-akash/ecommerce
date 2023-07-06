@@ -1,0 +1,53 @@
+.products-loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+}
+
+.products-list-heading {
+    color: #475569;
+    font-family: 'Roboto';
+    font-size: 32px;
+    font-weight: 500;
+    margin-top: 48px;
+}
+
+.products-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+}
+
+.all-products {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2px;
+}
+
+.search-box {
+    margin-top: 55px;
+    margin-right: 30px;
+    height: 2rem;
+    width: 20%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 8px #ddd;
+    font-size: medium;
+}
+
+.Not-Found {
+    display: flex;
+    justify-content: center;
+}
+
+.Not-Found img {
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    margin-left: 150px;
+}
+
+.not-found-text {
+    margin-top: 10px;
+    color: #475569;
+}

@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+.checkout-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    min-height: 100vh;
+}
+
+.checkout-container form {
+    padding: 20px;
+    width: 500px;
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .4);
+}
+
+.checkout-container form .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.checkout-container form .row .col {
+    flex: 1 1 250px;
+}
+
+.checkout-container form .row .col .title {
+    font-size: 20px;
+    color: #333;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.checkout-container form .row .col .inputBox {
+    margin: 15px 0;
+}
+
+.checkout-container form .row .col .inputBox span {
+    margin-bottom: 10px;
+    display: block;
+}
+
+.checkout-container form .row .col .inputBox input {
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    font-size: 15px;
+    text-transform: none;
+}
+
+.checkout-container form .row .col .inputBox input:focus {
+    border: 1px solid #000;
+}
+
+.checkout-container form .row .col .flex {
+    display: flex;
+    gap: 15px;
+}
+
+.checkout-container form .row .col .flex .inputBox {
+    margin-top: 5px;
+}
+
+.checkout-container form .submit-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 17px;
+    background: #27ae60;
+    color: #fff;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.checkout-container form .submit-btn:hover {
+    background: #2ecc71;
+}

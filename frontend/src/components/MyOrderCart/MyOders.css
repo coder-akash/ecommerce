@@ -1,0 +1,21 @@
+
+.order-empty-headings {
+    color: #1e293b;
+    font-family: 'Roboto';
+    font-size: 24px;
+    font-weight: 500;
+}
+
+@media screen and (min-width: 768px) {
+    .order-empty-headings {
+        font-size: 32px;
+    }
+}
+.order-cart-item {
+    width: 40px;
+    height: 10px;
+    border-radius: 4px;
+}
+.order-cart-title{
+    font-size: 40px;
+}
