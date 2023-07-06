@@ -20,7 +20,7 @@ const CheckOut=()=> {
     const onAddressSubmit = e =>{
         e.preventDefault()
         console.log(address)
-        axios.post('http://localhost:8081/addAddress',{'address':address})
+        axios.post('/addAddress',{'address':address})
         .then(res=>{console.log(res.statusText)
             if(res.statusText==='OK'){
                 navigate('/Payment')

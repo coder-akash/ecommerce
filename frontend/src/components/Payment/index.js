@@ -59,7 +59,7 @@ const Payment = ()=>  {
                 var amount = price * 100; //Razorpay consider the amount in paise
             
                 var options = {
-                  "key": "",
+                  "key": "rzp_test_mSY3Dgj5lDiQJI",
                   "amount": 0, // 2000 paise = INR 20, amount in paisa
                   "name": "FlyBuy",
                   'order_id':"",

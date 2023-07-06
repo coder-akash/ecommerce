@@ -76,7 +76,7 @@ const CartListView = () => {
   const getAddToCardData=()=>{
     let userDetails = JSON.parse(localStorage.getItem('userId'));
     //console.log(userDetails)
-    axios.post('http://localhost:8081/getCartList',{'userId':userDetails})
+    axios.post('/getCartList',{'userId':userDetails})
     .then(res=>{console.log(res.data)
       //let userDetails = JSON.parse(localStorage.getItem('userId'));
       //console.log(userDetails)

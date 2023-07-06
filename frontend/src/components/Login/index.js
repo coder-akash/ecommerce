@@ -73,7 +73,7 @@ const LoginForm = () =>{
       if (OTP===authOtp.otp){
         console.log('success')
         //navigate('/',{ replace: true })
-        axios.post('http://localhost:8081/verifyotp',authOtp.data) //{username:'akash',password:12233,mobile:12113123})
+        axios.post('/verifyotp',authOtp.data) //{username:'akash',password:12233,mobile:12113123})
     .then(res=>{
       console.log(res.data.jwt_token)
      onLoginSuccess(res.data.jwt_token,user)
@@ -170,7 +170,7 @@ const LoginForm = () =>{
     e.preventDefault()
     console.log(signUpData)
     if (signUpData.password === signUpData.conpass){
-    axios.post('http://localhost:8081/data',signUpData) //{username:'akash',password:12233,mobile:12113123})
+    axios.post('/data',signUpData) //{username:'akash',password:12233,mobile:12113123})
     .then(res=>{
       console.log(typeof(res.data))
       if (typeof(res.data)== "string"){
@@ -202,7 +202,7 @@ const LoginForm = () =>{
     e.preventDefault()
     console.log(showotp.mobile.length)
     if(showotp.mobile!=='' && showotp.mobile.length === 12){
-    axios.post('http://localhost:8081/getotp',{'mobile':showotp.mobile}) //{username:'akash',password:12233,mobile:12113123})
+    axios.post('/getotp',{'mobile':showotp.mobile}) //{username:'akash',password:12233,mobile:12113123})
     .then(res=>{
       console.log(res.data.data)
       setShowOtp({show:true,mobile:'',error:''})
