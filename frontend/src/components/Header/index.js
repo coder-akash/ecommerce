@@ -65,13 +65,13 @@ const Header = () => {
       <button type="button" className="logout-desktop-btn" onClick={onClickLogout}>
         Logout
       </button>
-      <button type="button" className="logout-mobile-btn">
+      {/* <button type="button" className="logout-mobile-btn">
         <img
           src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-log-out-img.png"
           alt="logout icon"
           className="logout-icon"
         />
-      </button>
+      </button> */}
     </div>
   </nav>
 )

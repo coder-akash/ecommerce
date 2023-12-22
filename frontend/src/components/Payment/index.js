@@ -30,7 +30,7 @@ const Payment = ()=>  {
     const getPrice=()=>{
         axios.post("/getPrice",{'userId':localStorage.getItem('userId')})
         .then(res=>{console.log(res)
-            setPrice(res.data.total_price)
+            setPrice(parseFloat(res.data.total_price))
             setPurchase_data(res.data.data)
         })
     }
@@ -53,21 +53,23 @@ const Payment = ()=>  {
             setDonePayment(true)
         }
         else if(paymentOpt==='razorpay'){
-                axios.post("/removeallCartItme",{'userId':localStorage.getItem('userId')})
-                .then(()=>{})
-                axios.post("/addPurches",{'data':purchase_data})
+                console.log(paymentOpt)
                 var amount = price * 100; //Razorpay consider the amount in paise
             
                 var options = {
-                  "key": "rzp_test_mSY3Dgj5lDiQJI",
+                  "key": "rzp_test_ww8OnXilzOXWJs",
                   "amount": 0, // 2000 paise = INR 20, amount in paisa
                   "name": "FlyBuy",
                   'order_id':"",
                   "image":"https://i.ibb.co/QrVMnhp/flybuy.png",
                   "handler": function(response) {
                       console.log('response',response);
+                      axios.post("/removeallCartItme",{'userId':localStorage.getItem('userId')})
+                      .then(()=>{})
+                      axios.post("/addPurches",{'data':purchase_data})
+                      updateProductCount(0)
                       setDonePayment(true)
-                        alert("Success")
+                        
                   },
                   "prefill": {
                     "contact": userDetails.mobile,

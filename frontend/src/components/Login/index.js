@@ -102,6 +102,7 @@ const LoginForm = () =>{
     .then(res=>{
         updateProductCount(res.data.length)
     },[])
+    .catch(err=>console.log('login'))
     //console.log(username,password)
     navigate('/',{ replace: true }) //it won't go back
     //navigate('/')
@@ -496,7 +497,7 @@ const LoginForm = () =>{
           }
           </>
         }
-  <div>
+  
   {showotp.show &&
       <div className="container3">
       <button className='backBtn' onClick={()=>{setShowOtp({...showotp,error:'',show:false} ,setOTP(''),setOtpError(''))}}><img src='back.png' alt='logo>' /></button>
@@ -516,7 +517,7 @@ const LoginForm = () =>{
       {otpEror!==''&& <p className='error-message'>*{otpEror}</p>}
       </div>
 }
-      </div>
+      
     </div>
 
   )

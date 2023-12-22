@@ -1,11 +1,14 @@
 import axios from 'axios';
-import React, { createContext, useEffect, useState } from 'react';
-
+import React, { createContext, useContext, useEffect, useState } from 'react';
+import { ModeContext } from './ModeContext';
 const ProductCountContext = createContext();
 
 const ProductCountProvider = ({ children }) => {
   //const [productsIds,setProductsIds] = useState([])
   const [productCount, setProductCount] = useState(0);
+  const {updateMode}  = useContext(ModeContext)
+  console.log('Context1')
+  try{
   useEffect(()=>{
     axios.post('/getCartList', {'userId':localStorage.getItem('userId')})
     .then(res=>{
@@ -13,8 +16,16 @@ const ProductCountProvider = ({ children }) => {
         //updateProducts(res.data.map(itme=>parseInt(itme.productId)))
         updateProductCount(res.data.length)
 
-    },[productCount])
-  })
+    })
+    .catch(err=>{
+      console.log('Context',err)
+      if (err.message ==='Network Error'){
+        updateMode('offline')
+      }
+    })
+    
+  },[productCount,updateMode])
+  
   
    /*
 
@@ -29,6 +40,12 @@ const ProductCountProvider = ({ children }) => {
     },[])
 
   */
+  }
+  catch (error){
+    console.log(error)
+  
+  }
+  
    
 
   

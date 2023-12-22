@@ -5,35 +5,7 @@ import './index.css'
 import axios from "axios";
 
 
-const data = [
-  {
-      'rating':'4.6',
-      'id':'1',
-      'imageUrl': '/products/1.jpg',
-      'title': 'TRQ White Shoes',
-      'category': 'Shoes',
-      'brand': 'AMZ brand Ghz',
-      'price': 1999
-    },
-    {
-      'rating':'3.9',
-      'id':'2',
-      'imageUrl': '/products/2.jpg',
-      'title': 'LOREM Watch Black',
-      'category': 'Watches',
-      'brand': 'Watch Ltd Siyana',
-      'price': 2599
-    },
-    {
-      'rating':'3.9',
-      'id':'2',
-      'imageUrl': '/products/2.jpg',
-      'title': 'LOREM Watch Black',
-      'category': 'Watches',
-      'brand': 'Watch Ltd Siyana',
-      'price': 2599
-    }
-  ]
+
 
 
 
@@ -44,11 +16,13 @@ const data = [
     axios.post('/getpurcheseditems',{'userId':localStorage.getItem('userId')})
     .then(res=>{
       console.log(res)
+      if (res.data.productData !== undefined){
       setProducts(res.data.productData)
+    }
     }
     )
   },[])
-
+console.log(products)
   
   return (
     

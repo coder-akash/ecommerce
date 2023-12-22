@@ -15,12 +15,14 @@ import Payment from './components/Payment'
 import Order from './components/Orderlist'
 import ContactUs from './components/ContactUs'
 import { ProductCountProvider } from './context/ProductCountContext'
+import { ModeContextProvider } from './context/ModeContext'
 
 class App extends Component {
      
   render() {
   return (
     <BrowserRouter>
+    <ModeContextProvider>
       <ProductCountProvider>
       <Routes>
           
@@ -37,7 +39,7 @@ class App extends Component {
           <Route  path='*' element={<Navigate replace to = '/not-found' />} />
       </Routes>
       </ProductCountProvider>
-      
+      </ModeContextProvider>
     
     </BrowserRouter>
   )

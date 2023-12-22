@@ -8,7 +8,7 @@ const dotenv = require('dotenv');
 var Upgrade = require('./upgrade.js');
 
 const textflow = require("textflow.js");
-textflow.useKey("7PdwesNHsgFK5vgvlsoMW5hfaB01FiJb0ThWd28rvDAzZmwIjVsidp7z6CwXLg41");
+textflow.useKey("7vmnl9zK6xxtoPmTyPApPXIclxTgwINYqlsM8wqHxLgcRqKIRWnIK4FW21w3CFCf");
 
 
 
@@ -17,19 +17,19 @@ app.use(cors())
 app.use(express.json())
 app.use('/upgrade',Upgrade)
 
-const db = sql.createConnection({
-    host:'192.168.30.75',
-    user:'user',
-    password:'pass',
-    database:'ecart'
-})
-
 // const db = sql.createConnection({
-//     host:'localhost',
-//     user:'root',
-//     password:'root',
+//     host:'192.168.30.75',
+//     user:'user',
+//     password:'pass',
 //     database:'ecart'
 // })
+
+const db = sql.createConnection({
+    host:'localhost',
+    user:'root',
+    password:'root',
+    database:'ecart'
+})
 
 const createToken = (body) =>{
     return jwt.sign(body, 'pass')
@@ -133,7 +133,7 @@ app.post('/getotp',(req,res)=>{
                 }
                 else{
                     console.log(result)
-                    //res.send({'data':{'username':result[0].username,'password':result[0].password},'otp':otp,'userId':result[0].id});
+                    res.send({'data':{'username':result[0].username,'password':result[0].password},'otp':otp,'userId':result[0].id});
                 }
               })
               
@@ -329,7 +329,7 @@ app.post('/getcategories',(req,res)=>{
     })
 })
 
-app.listen(8081, ()=>{
+app.listen(8081,'localhost', ()=>{
     console.log(`app listening at http://localhost:8081`)
 
 });

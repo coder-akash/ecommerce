@@ -2,7 +2,7 @@ import {useState } from 'react'
 //import CartItem from '../CartItem'
 
 import { FaStar } from "react-icons/fa"
-//import './index.css'
+import './index.css'
 import axios from 'axios'
 
 

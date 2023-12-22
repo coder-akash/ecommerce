@@ -2,14 +2,27 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../Header';
 import './index.css';
+import { useContext } from 'react'
+import { ModeContext } from '../../context/ModeContext'
+import Alert from 'react-bootstrap/Alert';
 
 const Home = () => {
+  const { mode } = useContext(ModeContext)
 
   return (
-    <>
-    
+    <div className='whole-home-page-container'>
       <Header />
+      <div className='warning'>
+        {
+          mode === 'offline' ?
+          <Alert key={'danger'} variant={'danger'}>
+          You are offline Check your internet connection!
+        </Alert>:
+        null
+        }
+        </div>
       <div className="home-container">
+    
         <div className="home-content">
           <h1 className="home-heading">Fashion is the armour to survive the reality of everyday life</h1>
           <img
@@ -33,7 +46,7 @@ const Home = () => {
         />
       </div>
       
-    </>
+    </div>
   );
 };
 

@@ -1,3 +1,4 @@
+/* eslint-disable */
 import './index.css'
 //import CartContext from '../../context/CartContext'
 import React ,{useContext} from 'react'
